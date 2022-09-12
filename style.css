@@ -523,14 +523,44 @@ h4 {
 .corp-green {
 }
 
-.news-group {
-	width: 90%;
-	margin: 10px auto;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+.news-container {
+	max-width: 90%;
+	margin: 0 auto;
+	min-height: 200px;
 }
 
-.news-group > h1 {
+.block-active {
+	border: 1px solid blue;
+	padding: 5px 10px;
+	border-radius: 20px;
+	background-color: lightyellow;
+}
+
+#hunt_container {
+	/*background-color: red;*/
+}
+#silence_container {
+	/*background-color: yellow;*/
+}
+#club_container {
+	/*background-color: green;*/
+}
+
+.news-group {
+	max-width: 1100px;
+	margin: -40px auto 30px auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.news-group-block > h2 {
+	font-size: 1.5em;
 	text-transform: uppercase;
+}
+
+.news-group-block > h2:hover {
+	color: lightseagreen;
+	font-weight: bold;
+	cursor: pointer;
 }
