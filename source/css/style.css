@@ -106,10 +106,10 @@ h4 {
 	position: absolute;
 	left: 50%;
 	top: 0;
-	background-color: rgb(255, 255, 255);
-	border-radius: 50%;
-	padding: 27px 7px;
-	transform: translateX(-50%);
+	transform: translateX(-30%);
+}
+.contacts__logo > img {
+	width: 50%;
 }
 
 .contacts__post {
@@ -153,9 +153,7 @@ h4 {
 }
 
 .menu-1 {
-
 	justify-content: flex-start;
-
 }
 
 .menu__item {
@@ -515,9 +513,6 @@ h4 {
 .document-item__img {
 	display: block;
 	margin: 10px auto;
-}
-
-.text-bold {
 }
 
 .corp-green {

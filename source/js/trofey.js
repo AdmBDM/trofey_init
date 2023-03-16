@@ -6,6 +6,12 @@ let spClose = document.getElementsByClassName('closex');
 // console.log("js start");
 // console.log(docBtns);
 
+$('[id^="news_block_"]').on('click', function () {
+	let $item = $(this).attr('id').split('_')[2];
+	$('[id$="_container"]').hide();
+	$("#" + $item + "_container").show();
+});
+
 for (const _btn of btn) {
 	_btn.onclick = function () {
 		console.log(_btn);

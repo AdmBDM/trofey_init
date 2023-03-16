@@ -1,57 +1,14 @@
-<?php
-?>
+<?php ?>
 
 <!DOCTYPE html>
-<html lang="ru-RU">
+<html lang="ru-RU" xmlns="http://www.w3.org/1999/html">
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Отдых, который вы заслужили"/>
-	<title>Охотничий клуб «Трофей» - элитная охота в Татарстане</title>
-	<link rel="stylesheet" href="source/css/style.css">
-	<link rel="stylesheet" href="source/css/popup-style.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-</head>
+<?php include 'source/php/page_head.php'; ?>
 
 <body>
 <header>
-	<div class="container contacts-bg">
-		<div class="content-container contacts">
-			<div class="contacts__logo">
-				<img src="images/logohead.png" alt="" class="logo">
-			</div>
-			<div class="contacts-left">
-				<a href="mailto:trofeyrt@gmail.com" class="contacts__post white text-bold text18">trofeyrt@gmail.com</a>
-			</div>
-			<div class="contacts-right">
-				<a class="contacts__phone white text-bold text18" href="tel:+7 (960) 045 24 93">+7 (960) 045 24 93</a>
-				<button id="my-btn-1" name="call-me" class="button contacts__button  my-btn white text-bold text18"
-						type="button">
-					Обратная связь
-				</button>
-			</div>
-		</div>
+	<?php include 'source/php/header.php'; ?>
 
-	</div>
-	<nav class="menu content-container">
-		<div class="menu menu-1">
-			<div class="menu__item menu__item-text">
-				<a class="button menu-btn text-bold" href="index.php">О КЛУБЕ</a>
-			</div>
-			<div class="menu__item menu__item-text">
-				<a class="button menu-btn text-bold" href="hunt.php">ОХОТА В ТАТАРСТАНЕ</a>
-			</div>
-		</div>
-		<div class="menu menu-2">
-			<div class="menu__item menu__item-text">
-				<a class="button menu-btn text-bold" href="info.php">ПОЛЕЗНАЯ ИНФОРМАЦИЯ</a>
-			</div>
-			<div class="menu__item menu__item-text">
-				<a class="button menu-btn text-bold" href="news.php">НОВОСТИ</a>
-			</div>
-		</div>
-	</nav>
 	<div class="container title-block title2">
 		<div class="content-container title">
 			<h2 class="title__discr white text-uppercase text-bold ">
@@ -136,7 +93,7 @@
 <?php include 'source/php/footer.php'; ?>
 
 <script src="source/js/jquery.min.js"></script>
-<script src="source/js/modal-w1.js"></script>
+<script src="source/js/trofey.js"></script>
 </body>
 
 </html>

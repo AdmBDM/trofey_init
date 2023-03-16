@@ -1,58 +1,22 @@
 <?php
+	/** @var $href_mail */
+	/** @var $href_tel */
+	/** @var $mainCfg */
+
+	if(session_status() != PHP_SESSION_ACTIVE) {
+		session_start();
+	}
 ?>
 
 <!DOCTYPE html>
-<html lang="ru-RU" xmlns="http://www.w3.org/1999/html">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Отдых, который вы заслужили"/>
-	<title>Охотничий клуб «Трофей» - элитная охота в Татарстане</title>
-	<link rel="stylesheet" href="source/css/style.css">
-	<link rel="stylesheet" href="source/css/slider_style.css">
-	<link rel="stylesheet" href="source/css/slider_style_mobile.css">
-	<link rel="stylesheet" href="source/css/popup-style.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-</head>
+<html lang="ru-RU">
+
+<?php include 'source/php/page_head.php'; ?>
 
 <body>
 <header>
-	<div class="container contacts-bg">
-		<div class="content-container contacts">
-			<div class="contacts__logo">
-				<img src="images/logohead.png" alt="" class="logo">
-			</div>
-			<div class="contacts-left">
-				<a href="mailto:trofeyrt@gmail.com" class="contacts__post white text-bold text18">trofeyrt@gmail.com</a>
-			</div>
-			<div class="contacts-right">
-				<a class="contacts__phone white text-bold text18" href="tel:+7 (960) 045 24 93">+7 (960) 045 24 93</a>
-				<button id="my-btn-1" name="call-me" class="button contacts__button my-btn white text-bold text18"
-						type="button">
-					Обратная связь
-				</button>
-			</div>
-		</div>
+	<?php include 'source/php/header.php'; ?>
 
-	</div>
-	<nav class="menu content-container">
-		<div class="menu menu-1">
-			<div class="menu__item menu__item-text">
-				<a class="button menu-btn text-bold" href="index.php">О КЛУБЕ</a>
-			</div>
-			<div class="menu__item menu__item-text">
-				<a class="button menu-btn text-bold" href="hunt.php">ОХОТА В ТАТАРСТАНЕ</a>
-			</div>
-		</div>
-		<div class="menu menu-2">
-			<div class="menu__item menu__item-text">
-				<a class="button menu-btn text-bold" href="info.php">ПОЛЕЗНАЯ ИНФОРМАЦИЯ</a>
-			</div>
-			<div class="menu__item menu__item-text">
-				<a class="button menu-btn text-bold" href="news.php">НОВОСТИ</a>
-			</div>
-		</div>
-	</nav>
 	<div class="container title-block">
 		<div class="content-container title">
 			<h1 class="title__name white text-uppercase text-bold">
@@ -64,7 +28,6 @@
 		</div>
 	</div>
 </header>
-
 <main>
 	<div class="info-block content-container">
 		<div class="info-block-title">
@@ -74,7 +37,7 @@
 		 проводим охоту и рыбалку по Республике Татарстан.</span>
 		</div>
 		<div class="club-mission">
-			<img src="images/icon1_1GdtMwr.png" alt="" class="club-mission__img">
+			<img src="images/logo/icon1_1GdtMwr.png" alt="" class="club-mission__img">
 			<div class="club-mission__discr">
 		 <span class="club-mission__discr-text text18 text-bold">
 			Миссия клуба:<br/>– Обеспечение бережного отношения к фауне, следовательно, процветания фауны и флоры Республики
@@ -114,48 +77,41 @@
 	</div>
 
 	<article class="blog content-container">
-		<img src="images/beaver.jpg" alt="" class="blog__img">
+		<img src="images/7news.jpg" alt="" class="blog__img">
 		<div class="blog-article blog-article-width45">
-			<h3 class="blog-article__title text-bold">Об охоте на</h3>
-			<p class="blog-article__discr text-bold ">БОБРА</p>
-			<p class="blog-article__text">С 01 октября 2022 по 28 февраля 2023 открывается сезон охоты на бобра.</p><br>
+			<h3 class="blog-article__title text-bold">Об охоте на:</h3>
+			<p class="blog-article__discr text-bold ">СЕЛЕЗНЯ С ПОДСАДНОЙ</p>
+			<p class="blog-article__text">С 01 апреля 2023г по 06 мая 2023г открывается весенний сезон охоты на селезня с подсадной уткой.</p>
 			<p class="blog-article__text"></p>Стоимость путёвки - 3&nbsp;000 рублей.<br>
 			<p class="blog-article__text"></p><br>
-			<p class="blog-article__discr">По вопросу приобретения путёвок звоните
-				<a class="contacts__phone black text18 text-bold " href="tel:+7 (960) 045 24 93">
-					+7&nbsp;(960)&nbsp;045&nbsp;24&nbsp;93</a>.
-			</p>
+			<p class="blog-article__discr">По вопросу приобретения путёвок звоните <a
+						class="contacts__phone black text18 text-bold " href="<?= $href_tel ?>"> <?= $mainCfg['phone'] ?></a>.</p>
 		</div>
 	</article>
 
 	<article class="blog content-container">
-		<img src="images/Hare-Fox.webp" alt="" class="blog__img">
+		<img src="images/goose01.jpg" alt="" class="blog__img">
 		<div class="blog-article blog-article-width45">
-			<h3 class="blog-article__title text-bold">Об охоте на</h3>
-			<p class="blog-article__discr text-bold ">ЗАЙЦА-РУСАКА, ЛИСИЦУ</p>
-			<p class="blog-article__text">С 15 сентября 2022 по 28 февраля 2023 открывается сезон охоты на зайца-русака и лисицу.</p><br>
-			<p class="blog-article__text"></p>Стоимость путёвки - 6&nbsp;000 рублей.<br>
+			<h3 class="blog-article__title text-bold">Об охоте на:</h3>
+			<p class="blog-article__discr text-bold ">ГУСЯ, СЕЛЕЗНЯ</p>
+			<p class="blog-article__text">С 15 апреля 2023г по 24 апреля 2023г открывается сезон охоты на селезня, гуся.</p>
+			<p class="blog-article__text">Стоимость путёвки - 2000 рублей.</p>
 			<p class="blog-article__text"></p><br>
-			<p class="blog-article__discr">По вопросу приобретения путёвок звоните
-				<a class="contacts__phone black text18 text-bold " href="tel:+7 (960) 045 24 93">
-					+7&nbsp;(960)&nbsp;045&nbsp;24&nbsp;93</a>.
-			</p>
+			<p class="blog-article__discr">По вопросу приобретения путёвок звоните <a
+						class="contacts__phone black text18 text-bold " href="<?= $href_tel ?>"><?= $mainCfg['phone'] ?></a>.</p>
 		</div>
 	</article>
 
 	<article class="blog content-container">
-		<img src="images/anas02.jpg" alt="" class="blog__img">
+		<img src="images/scolopax01.jpg" alt="" class="blog__img">
 		<div class="blog-article blog-article-width45">
-			<h3 class="blog-article__title text-bold">Об охоте на</h3>
-			<p class="blog-article__discr text-bold ">ВОДОПЛАВАЮЩУЮ И БОЛОТНО-ЛУГОВУЮ ДИЧЬ</p>
-			<p class="blog-article__text">С 3 сентября по 5 декабря открывается сезон охоты на водоплавающую,
-				болотно-луговую, степную и полевую дичь.</p><br>
-			<p class="blog-article__text"></p>Стоимость путёвки - 2&nbsp;000 рублей.<br>
+			<h3 class="blog-article__title text-bold">Об охоте на:</h3>
+			<p class="blog-article__discr text-bold ">ВАЛЬДШНЕПА</p>
+			<p class="blog-article__text">С 22 апреля 2023г по 01 мая 2023г открывается сезон охоты на вальдшнепа.</p>
+			<p class="blog-article__text">Стоимость путёвки - 2000 рублей.</p>
 			<p class="blog-article__text"></p><br>
-			<p class="blog-article__discr">По вопросу приобретения путёвок звоните
-				<a class="contacts__phone black text18 text-bold " href="tel:+7 (960) 045 24 93">
-					+7&nbsp;(960)&nbsp;045&nbsp;24&nbsp;93</a>.
-			</p>
+			<p class="blog-article__discr">По вопросу приобретения путёвок звоните <a
+						class="contacts__phone black text18 text-bold " href="<?= $href_tel ?>"><?= $mainCfg['phone'] ?></a>.</p>
 		</div>
 	</article>
 
@@ -223,6 +179,6 @@
 <?php include 'source/php/footer.php'; ?>
 
 <script src="source/js/jquery.min.js"></script>
-<script src="source/js/modal-w1.js"></script>
+<script src="source/js/trofey.js"></script>
 </body>
 </html>

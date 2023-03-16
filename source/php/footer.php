@@ -1,4 +1,7 @@
 <?php
+	/** @var $href_mail */
+	/** @var $href_tel */
+	/** @var $mainCfg */
 ?>
 
 <?php include 'source/php/callback.php'; ?>
@@ -10,22 +13,21 @@
 		</div>
 		<div class="footer-info">
 			<div class="footer-info__logo">
-				<img src="images/logofooter.png" alt="">
+				<img src="/images/logofooter.png" alt="">
 			</div>
 			<div class="footer-info__contacts">
-				<img class="footer-info-contacts__img" src="images/icon3.png" alt="">
+				<img class="footer-info-contacts__img" src="/images/icon3.png" alt="">
 				<a class="footer-info-contacts__text footer-info-contacts__text-d white text-bold text18"
-				   href="tel:+7 (960) 045 24 93">+7 (960) 045 24
-					93</a>
+				   href="<?= $href_tel ?>"><?= $mainCfg['email'] ?></a>
 			</div>
 			<div class="footer-info__contacts">
-				<img class="footer-info-contacts__img" src="images/icon4.png" alt="">
-				<span class="footer-info-contacts__text white text-bold">Казань, Вишневского 26</span>
+				<img class="footer-info-contacts__img" src="/images/icon4.png" alt="">
+				<span class="footer-info-contacts__text white text-bold"><?= $mainCfg['address'] ?></span>
 			</div>
 			<div class="footer-info__contacts">
-				<img class="footer-info-contacts__img" src="images/icon5.png" alt="">
-				<a href="mailto:trofeyrt@gmail.com"
-				   class="footer-info-contacts__text footer-info-contacts__text-d white text-bold">trofeyrt@gmail.com</a>
+				<img class="footer-info-contacts__img" src="/images/icon5.png" alt="">
+				<a href="<?= $href_mail ?>"
+				   class="footer-info-contacts__text footer-info-contacts__text-d white text-bold"><?= $mainCfg['email'] ?></a>
 			</div>
 		</div>
 	</div>
